@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Timeline</title>
+    <title>Tech Timeline News</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Tech Timeline</h1>
+        <h1>Tech Timeline News</h1>
         <p>The Evolution of Technology</p>
     </header>
     <main>
-        <article class="timeline">
-    <div class="timeline-event">
-        <h2>1969 - ARPANET Launched</h2>
-        <p>The precursor to the modern Internet, ARPANET was launched by the U.S. Department of Defense.</p>
-    </div>
-    <div class="timeline-event">
-        <h2>1973 - First Mobile Phone Call</h2>
-        <p>Martin Cooper made the first mobile phone call on a Motorola DynaTAC, revolutionizing communication.</p>
-    </div>
-    <!-- More events -->
-</article>
-
+        <section class="timeline-era">
+            <h2>1960s - 1970s</h2>
+            <div class="timeline-event" data-tooltip="Advanced Research Projects Agency Network, a precursor to the Internet.">
+                <h3>1969 - ARPANET Launched</h3>
+                <p>The precursor to the modern Internet, ARPANET was launched by the U.S. Department of Defense.</p>
+                <a href="https://en.wikipedia.org/wiki/ARPANET" target="_blank" rel="noopener noreferrer">Read more about it on Wikipedia</a>
+            </div>
+            <div class="timeline-event" data-tooltip="First mobile phone call by Martin Cooper.">
+                <h3>1973 - First Mobile Phone Call</h3>
+                <p>Martin Cooper made the first mobile phone call on a Motorola DynaTAC, revolutionizing communication.</p>
+                <a href="https://en.wikipedia.org/wiki/Mobile_phone" target="_blank" rel="noopener noreferrer">Read more about it on Wikipedia</a>
+            </div>
+        </section>
+        <!-- More sections for other eras -->
     </main>
     <footer>
         <p>&copy; 2024 Tech Timeline News</p>
     </footer>
+    <button id="back-to-top" style="display:none;">Back to Top</button>
+    <script src="script.js"></script>
 </body>
 </html>
+
