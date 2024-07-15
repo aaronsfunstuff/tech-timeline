@@ -39,6 +39,14 @@ main {
     margin: 20px 0;
     background-color: #fff;
     border: 2px solid #000;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-item.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .timeline-item:before {
@@ -57,7 +65,7 @@ main {
     padding-left: 80px;
 }
 
-.timeline-content h2 {
+.timeline-content h3 {
     margin-top: 0;
 }
 
@@ -96,8 +104,59 @@ html {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #back-to-top:hover {
     background-color: #0056b3;
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+}
+
+.timeline-item.expanded .details {
+    display: block;
+}
+
+.expand-btn {
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
